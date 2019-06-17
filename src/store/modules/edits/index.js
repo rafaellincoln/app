@@ -6,7 +6,8 @@ export const state = {
   collection: null,
   primaryKey: null,
   values: {},
-  savedValues: {}
+  savedValues: {},
+  savedItem: {}
 };
 
 export default {

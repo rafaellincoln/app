@@ -1,0 +1,25 @@
+{
+  "name": "$t:matrix",
+  "version": "1.0.0",
+  "icon": "call_merge",
+  "types": ["o2m"],
+  "relation": "o2m",
+  "options": {
+    "template": {
+      "name": "$t:template",
+      "comment": "$t:template_comment",
+      "interface": "text-input",
+      "options": {
+        "placeholder": "$t:template_placeholder"
+      }
+    }
+  },
+  "translation": {
+    "en-US": {
+      "matrix": "Matrix",
+      "template": "Dropdown Template",
+      "template_comment": "How to format the dropdown options",
+      "template_placeholder": "{{title}} — {{author}}"
+    }
+  }
+}
