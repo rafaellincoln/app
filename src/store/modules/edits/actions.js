@@ -42,14 +42,14 @@ export function save({ commit, state, rootState }, overrides) {
 
   if (info.primaryKey === "+") {
     return api.createItem(info.collection, info.values).then(res => {
-      commit(ITEM_CREATED);
+      commit(ITEM_CREATED, res);
       return res;
     });
   }
 
   if (info.collection.startsWith("directus_")) {
     return api.updateItem(info.collection, info.primaryKey, info.values).then(res => {
-      commit(ITEM_CREATED);
+      commit(ITEM_CREATED, res);
       return res;
     });
   }
@@ -59,7 +59,7 @@ export function save({ commit, state, rootState }, overrides) {
       fields: "*.*.*.*"
     })
     .then(res => {
-      commit(ITEM_CREATED);
+      commit(ITEM_CREATED, res);
       return res;
     });
 }
